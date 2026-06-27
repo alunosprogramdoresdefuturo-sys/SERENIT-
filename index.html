@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SERENITÀ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:url("imagens/fundo.png") center/cover no-repeat;
+    background-attachment:fixed;
+    color:#7B5A44;
+    font-family:'Montserrat',sans-serif;
+}
+
+header{
+    padding:30px 60px;
+    position:relative;
+}
+
+.menu{
+    position:absolute;
+    left:60px;
+    top:35px;
+    cursor:pointer;
+}
+
+.menu span{
+    display:block;
+    width:35px;
+    height:3px;
+    background:#9B7653;
+    margin:8px 0;
+    border-radius:10px;
+}
+
+.logo{
+    text-align:center;
+}
+
+.logo h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:110px;
+}
+
+.logo p{
+    letter-spacing:6px;
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+    padding:40px 8%;
+}
+
+.texto{
+    flex:1;
+}
+
+.texto h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:85px;
+    line-height:0.95;
+    margin-bottom:25px;
+}
+
+.divisor{
+    width:130px;
+    height:2px;
+    background:#D7BDA8;
+    margin-bottom:30px;
+}
+
+.texto p{
+    font-size:24px;
+    line-height:1.8;
+}
+
+.imagem{
+    flex:1;
+}
+
+.imagem img{
+    width:100%;
+    max-width:650px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.cards{
+    width:85%;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card-link{
+    text-decoration:none;
+    color:inherit;
+}
+
+.card{
+    background:#F8F2EC;
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    transition:.3s;
+    border:1px solid #E5D6C9;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.icone{
+    font-size:50px;
+}
+
+.card h3{
+    margin:15px 0;
+    font-size:30px;
+}
+
+.linha{
+    width:60px;
+    height:2px;
+    background:#D7BDA8;
+    margin:15px auto;
+}
+
+.card p{
+    line-height:1.7;
+}
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.logo h1{
+    font-size:70px;
+}
+
+.texto h2{
+    font-size:55px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+<script>
+function abrirFisico(){
+    document.getElementById('paginaFisica').style.display='block';
+}
+
+function fecharFisico(){
+    document.getElementById('paginaFisica').style.display='none';
+}
+</script>
+<body>
+
+<header>
+
+<div class="menu">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="logo">
+<h1>SERENITÀ</h1>
+<p>AUTOCUIDADO • BEM-ESTAR</p>
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="texto">
+
+<h2>Seu momento<br>Sua essência</h2>
+
+<div class="divisor"></div>
+
+<p>
+Um espaço criado para inspirar e apoiar você no cuidado diário
+com mente, corpo e relações.
+</p>
+
+</div>
+
+<div class="imagem">
+<img src="imagens/mulher.jpg" alt="Mulher">
+</div>
+
+</section>
+
+<section class="cards">
+
+<a href="mental.html" class="card-link">
+<div class="card">
+<div class="icone">🧠</div>
+<h3>MENTAL</h3>
+<div class="linha"></div>
+<p>Cuide da sua mente e das suas emoções.</p>
+</div>
+</a>
+
+<div class="card" onclick="abrirFisico()" style="cursor:pointer;">
+<div class="icone">🧍</div>
+<h3>FÍSICA</h3>
+<div class="linha"></div>
+<p>Fortaleça seu corpo e tenha mais energia.</p>
+</div>
+
+<div class="card" onclick="abrirSocial()" style="cursor:pointer;">
+<div class="icone">👥</div>
+<h3>SOCIAL</h3>
+<div class="linha"></div>
+<p>Cultive conexões saudáveis e significativas.</p>
+</div>
+
+</section>
+<div id="paginaFisica">
+ ...
+</div>
+</body>
+
+</html>
